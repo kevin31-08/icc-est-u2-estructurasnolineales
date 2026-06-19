@@ -74,9 +74,9 @@ public class InteTree {
     private void postOrdenRecursivo(Nodes<Integer> actual) {
        if(actual== null)
         return ;
-        System.out.println(actual.getLeft());
-        preOrdenRecursivo(actual);
-        preOrdenRecursivo(actual.getRight());
+        postOrdenRecursivo(actual.getLeft());
+        postOrdenRecursivo(actual.getRight());
+        System.out.println(actual);
         
         
     }
@@ -90,9 +90,9 @@ public class InteTree {
        if(actual== null)
         return ;
         
-        preOrdenRecursivo(actual.getLeft());
+        intOrdenRecursivo(actual.getLeft());
         System.out.println(actual);
-         System.out.println(actual.getRight());
+         intOrdenRecursivo(actual.getRight());
          
     }
       public int getHeigth(){

@@ -15,7 +15,20 @@ public class App {
      arbolPersona.add(new Persona("ana", 25));
      arbolPersona.add(new Persona("luis", 35));
      arbolPersona.add(new Persona("maria", 28));
-
+      System.out.println(arbolPersona.getRoot());
+         System.out.println(arbolPersona.getRoot().getLeft().getRight());
+         System.out.println("pre orden ");
+         arbolPersona.preOrden();
+         System.out.println("pos orden ");
+         arbolPersona.postOrden();
+         System.out.println("int orden ");
+         arbolPersona.postOrden();
+         System.out.println("altura del arbol ");
+         int altura =  arbolPersona.getHeigth();
+         System.out.println(altura);
+         System.out.println("peso del arbol ");
+         int peso =arbolPersona.getpeso();
+         System.out.println(peso);
    }
 
     private static void runIntTree() {
