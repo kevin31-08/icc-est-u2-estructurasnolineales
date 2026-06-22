@@ -9,12 +9,15 @@
 
 creamos carpetas models, node, tree , en node creamos una clase Node que le hacemos generica , creamos un nodo y lo instanciamos en el constructor , en la carpeta tree creamos una clase de IntTree en donde aplicamos la recursividad y el orden de los arboles que son el preorden , intorden, posorden. en las siguienetes clases:
 
+
 ![alt text](image.png)
 
 Impresion:
+
 ![alt text](image-3.png)
 
 Impresion de arbol por edades:
+
 ![alt text](image-6.png)
 
 ## clase 2.
@@ -29,9 +32,11 @@ Generamos una clase persona con el metodo add que inserta un nodo en un arbol de
 
 metodo :
 
+
 ![alt text](image-5.png)
 
 metodo implementado:
+
 
 ![alt text](image-1.png)
 
@@ -39,17 +44,21 @@ En la clase IntTree , realizamos un metodo que calcule la altura de un arbol bin
 
 metodo implementado:
 
+
 ![alt text](image-2.png)
 
 Impresion:
+
 ![alt text](image-4.png)
 
 ## Clase 3.
 
 En la clase Ejercicio1 recibe un arreglo de numeros y construye un arbol binario insertando cada elemento mediante el metodo de add . luego obtiene la raiz , los metodos de printTree y printInvertido, el primero se encarga de mostrar el arbol de hojas derecho arriba despues arriba y al izquierda , mientras que el printInvertido tiene el recorrido de izquierda a derecha generando estas impresiones:
+
 ![alt text](image-7.png)
 
 Metodo de printTree:
+
  public void printTree(Nodes<Integer> root){
         System.out.println("IMPRIMIENDO EL ARBOL: ");
         printTreeRecursivo(root,0);
@@ -67,6 +76,7 @@ Metodo de printTree:
     }
 
 Metodo de printInvertido:
+
 
  public void printInvertido(Nodes<Integer> root){
         System.out.println("IMPRESION ARBOL VERTICAL");
