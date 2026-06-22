@@ -10,8 +10,14 @@ public class Ejercicio1 {
         for(int numero : numeros){
             arbol.add(numero);
         }
+         Nodes<Integer> root = arbol.getRoot();
+                if (root == null) {
+            System.out.println("El árbol está vacío");
+            return;
+        }
         //IMPRIMIR ARBOL 
-        arbol.intOrden();
+       printTree(root);
+       printInvertido(root);
     }
     public void printTree(Nodes<Integer> root){
         System.out.println("IMPRIMIENDO EL ARBOL: ");
@@ -22,21 +28,28 @@ public class Ejercicio1 {
         return ;
         printTreeRecursivo(root.getRight(),nivel+1);
         for(int i = 0; i< nivel;i++){
-            System.out.println("\\t");
+            System.out.print("    ");
         }
          System.out.println(root.getValue());
         printTreeRecursivo(root.getLeft(),nivel+1);
        
     }
-    private void invertirRecursivo(Nodes<Integer> root, int nivel){
-        if (root == null ) {
-            return;
-        printTreeRecursivo(root.getRight(),nivel+1);
-        for(int i = 0; i< nivel;i++){
-            System.out.println("\\t");
+
+    public void printInvertido(Nodes<Integer> root){
+        System.out.println("IMPRESION ARBOL VERTICAL");
+        printInvertirRecursivo(root,0);
+    }
+    private void printInvertirRecursivo(Nodes<Integer> root, int nivel){
+         if (root == null) {
+        return;  
+    }
+       printInvertirRecursivo(root.getLeft(), nivel+1);
+        for (int i = 0; i < nivel; i++) {
+        System.out.print("    ");
         }
-         System.out.println(root.getValue());
-        printTreeRecursivo(root.getLeft(),nivel+1);
-        }
+
+        System.out.println(root.getValue());
+
+        printInvertirRecursivo(root.getRight(), nivel+1);
     }
 }

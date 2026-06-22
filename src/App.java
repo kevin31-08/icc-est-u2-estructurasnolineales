@@ -15,11 +15,7 @@ public class App {
       Ejercicio1 ejercicio1 = new Ejercicio1();
       
       int[] numeros = new int[]{5,3,7,2,4,6,8};
-      BinaryTree arbol = new BinaryTree<>();
-     
-      Nodes<Integer> root = ejercicio1.insert(ejercicio1.getRoot());
-
-      ejercicio1.printTree(root);
+      ejercicio1.insert(numeros);
    }
 
     private static void runBinaryTree() {

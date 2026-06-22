@@ -119,12 +119,12 @@ public class InteTree {
       private int getPesoRecursivo(Nodes<Integer> actual) {
         if(actual == null)
             return 0;
-        int peso = 0;
-        int heigthLeft = getHeigthRecursivo(actual.getLeft());
-        int heigthReigth = getHeigthRecursivo(actual.getRight());
+        
+        
 
         
-        return 1 + heigthLeft + heigthReigth;
+        return 1 + 
+        (getPesoRecursivo(actual.getLeft()) + getPesoRecursivo(actual.getRight()));
       } 
 
 }
