@@ -1,12 +1,26 @@
 import structures.models.Persona;
+import structures.node.Nodes;
 import structures.trees.BinaryTree;
+import structures.trees.Ejercicio1;
 import structures.trees.InteTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
        runIntTree();
       runBinaryTree();
+      runEjercicios();
     }
+
+    private static void runEjercicios() {
+      Ejercicio1 ejercicio1 = new Ejercicio1();
+      
+      int[] numeros = new int[]{5,3,7,2,4,6,8};
+      BinaryTree arbol = new BinaryTree<>();
+     
+      Nodes<Integer> root = ejercicio1.insert(ejercicio1.getRoot());
+
+      ejercicio1.printTree(root);
+   }
 
     private static void runBinaryTree() {
      BinaryTree<String> arbolString = new BinaryTree<>();
@@ -17,16 +31,16 @@ public class App {
      arbolPersona.add(new Persona("maria", 28));
       System.out.println(arbolPersona.getRoot());
          System.out.println(arbolPersona.getRoot().getLeft().getRight());
-         System.out.println("pre orden ");
+         System.out.println("/// PRE ORDEN /// ");
          arbolPersona.preOrden();
-         System.out.println("pos orden ");
+         System.out.println("/// POS ORDEN ///");
          arbolPersona.postOrden();
-         System.out.println("int orden ");
+         System.out.println("/// INT ORDEN  ///");
          arbolPersona.postOrden();
-         System.out.println("altura del arbol ");
+         System.out.println("/// ALTURA DEL ARBOL  ///");
          int altura =  arbolPersona.getHeigth();
          System.out.println(altura);
-         System.out.println("peso del arbol ");
+         System.out.println("/// PESO DEL ARBOL ///");
          int peso =arbolPersona.getpeso();
          System.out.println(peso);
    }

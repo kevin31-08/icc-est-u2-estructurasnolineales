@@ -39,7 +39,7 @@ public class Nodes<T> {
 
     @Override
     public String toString() {
-        return "Nodes [value=" + value + "]";
+        return "Nodes: value -> " + value + "";
     }
     
     
