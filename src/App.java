@@ -1,22 +1,71 @@
+import java.util.List;
+
 import structures.models.Persona;
+
 import structures.node.Nodes;
 import structures.trees.BinaryTree;
-import structures.trees.Ejercicio1;
 import structures.trees.InteTree;
+import structures.trees.Ejercicio_01_insert.InsertBSTTest;
+import structures.trees.Ejercicio_02_invert.InvertBinaryTree;
+import structures.trees.Ejercicio_03_listLeves.ListLevels;
+import structures.trees.Ejercicio_04_depth.Depth;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       runIntTree();
-      runBinaryTree();
+       //runIntTree();
+      //runBinaryTree();
       runEjercicios();
     }
 
-    private static void runEjercicios() {
-      Ejercicio1 ejercicio1 = new Ejercicio1();
-      
-      int[] numeros = new int[]{5,3,7,2,4,6,8};
-      ejercicio1.insert(numeros);
-   }
+ private static void runEjercicios() {
+
+    InsertBSTTest ejercicio1 = new InsertBSTTest();
+    InvertBinaryTree ejercicio2 = new InvertBinaryTree();
+
+   
+    int[] numero1 = new int[]{};
+    int[] numero2 = new int[]{10};
+    int[] numero3 = new int[]{10,8,6,4};
+     int[] numeros = new int[]{5,3,7,2,4,6,8};
+    ejercicio1.insert(numeros);
+    ejercicio1.insert(numero1);
+    ejercicio1.insert(numero2);
+    ejercicio1.insert(numero3);
+   
+    Nodes root = ejercicio2.insert(numeros);
+    Nodes root1 = ejercicio2.insert(numero1);
+    Nodes root2 = ejercicio2.insert(numero2);
+    Nodes root3 = ejercicio2.insert(numero3);
+
+    ListLevels listLevels = new ListLevels();
+    List<List<Integer>> niveles = listLevels.listLevels(root);
+    List<List<Integer>> niveles1 = listLevels.listLevels(root1);
+    List<List<Integer>> niveles2 = listLevels.listLevels(root2);
+    List<List<Integer>> niveles3 = listLevels.listLevels(root3);
+
+    imprimirNiveles(niveles);  
+    System.out.println();
+
+    imprimirNiveles(niveles1);
+    System.out.println();
+
+    imprimirNiveles(niveles2);
+    System.out.println();
+
+    imprimirNiveles(niveles3);
+    System.out.println();
+
+    Depth ejercicio4 = new Depth();
+    int profundidad = ejercicio4.maxDepth(root);
+    System.out.println("Profundidad: " + profundidad);
+     int profundidad1 = ejercicio4.maxDepth(root1);
+     System.out.println("Profundidad: " + profundidad1);
+      int profundidad2 = ejercicio4.maxDepth(root2);
+      System.out.println("Profundidad: " + profundidad2);
+       int profundidad3 = ejercicio4.maxDepth(root3);
+        System.out.println("Profundidad: " + profundidad3);
+}
+
 
     private static void runBinaryTree() {
      BinaryTree<String> arbolString = new BinaryTree<>();
@@ -74,4 +123,20 @@ public class App {
          int peso =arbolNumeros.getpeso();
          System.out.println(peso);
     }
+    public static void imprimirNiveles(List<List<Integer>> niveles) {
+
+    for (List<Integer> nivel : niveles) {
+
+        for (int i = 0; i < nivel.size(); i++) {
+
+            System.out.print(nivel.get(i));
+
+            if (i < nivel.size() - 1) {
+                System.out.print(" -> ");
+            }
+        }
+
+        System.out.println();
+    }
+}
 }
