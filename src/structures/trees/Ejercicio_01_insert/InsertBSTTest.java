@@ -21,7 +21,7 @@ public class InsertBSTTest {
        return root;
     }
     public void printTree(Nodes<Integer> root){
-        System.out.println("IMPRIMIENDO EL ARBOL: ");
+        System.out.println("IMPRIMIENDO EL ARBOL (ejercici01): ");
         printTreeRecursivo(root,0);
     }
     private void printTreeRecursivo(Nodes<Integer> root, int nivel) {

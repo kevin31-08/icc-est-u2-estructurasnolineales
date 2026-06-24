@@ -2,6 +2,7 @@
 
 - Nombre del estudiante: Kevin Sacaquirin
 
+- FECHA : 24 de junio de 2026
 
 - Descripcion general del proyecto:
 
@@ -11,15 +12,17 @@ En el proyecto se realizo diferentes ejerciciosde logica como son ordenar un arb
 
 En el ejercicio 1 se realizo un arbol binario de busqueda con el metodo de insert que recibe un arreglo de numeros , crea un arbol vacio va insertando cada numero con el metodo implemntado de add , luego de esto obtiene la raiz y verifica si esta vacio si esto se cumple llama al metodo de print tree para mostrar en este es donde se usa la logica y la resolucion del ejercicio1 este metodo sirve para mandarle al arbol mientras printTreeRecursivo hace el reccoirdo de forma recursiva , primero a la hoja derecha y luego a la hoja izquierda aqui se desarrola la impresion con los print para nos salga de esta manera:
 
-![alt text](image.png)
+![alt text](image-4.png)
 
 con el siguiente codigo :
+
 
 
  public void printTree(Nodes<Integer> root){
         System.out.println("IMPRIMIENDO EL ARBOL: ");
         printTreeRecursivo(root,0);
     }
+
     private void printTreeRecursivo(Nodes<Integer> root, int nivel) {
          if(root == null)
         return ;
@@ -27,6 +30,8 @@ con el siguiente codigo :
         for(int i = 0; i< nivel;i++){
             System.out.print("    ");
         }
+
+
          System.out.println(root.getValue());
         printTreeRecursivo(root.getLeft(),nivel+1);
        
@@ -37,7 +42,7 @@ con el siguiente codigo :
 
 Este problema de igual manera que el anterios juega con logica , este ejercicio recibe la raiz del arbol y llama al metodo recursivo para imprimirlo , el metodo printInvertido primero verifica si el nodo no es nulo para detener la recursion como su caso base , luego recorre el primer hijo de la izquierda y lo imprime con los espacios , asi muestra el valor actual del nodo y finalmente recorre el hijo derecha va de izquierda a derecha a diferencia del primero . Resultado en los casos difernetes :
 
-![alt text](image-1.png)
+![alt text](image-5.png)
 
 con el siguiente codigo:
 
@@ -64,8 +69,7 @@ con el siguiente codigo:
 
 El ejercicio3 nos indica que recorre el arbol binario por niveles y guarda los nodos cada vez que los recorre y los guarda en una lista , donde se almacena los niveles y tambien verifica si la raiz no es nula sino hace un return de la lista , despues de esta verificacion utiliza una cola para ir procesando los nodos desde la raiz hasta las hojas , en cada vez que entra al while este sabe los niveles para saber cuantos nodos estan en el nodo actual , lo extrae con el poll y ademas los elimina y asi hasta terminar nos devuelve un resultado , que nos da una lista con los niveles con la impresion con juegos de print. Resultado:
 
-![alt text](image-2.png)
-
+![alt text](image.png)
 con el siguiente codigo:
 
  public List<List<Nodes<Integer>>> listLevels(Nodes<Integer> root) {
@@ -110,7 +114,7 @@ con el siguiente codigo:
 En este ejercicio es similar al realizado en clase que fue calcular pero , pero ahora es lo niveles aunque la logica es la misma , este nos indica la profundidad del arbol , primero verifica la raiz si no es nula despues se llama asi mismo de forma recursiva para calular su profundidad tanto al lado izquierdo como el derecho y finalmente compara ambas profundidades usando el Math y este nos devuelve el mayor y a ese le sumamos 1 porque ese 1 es el nodo actual .
 RESULTADO:
 
-![alt text](image-3.png)
+![alt text](image-6.png)
 
 con el siguiente codigo:
 

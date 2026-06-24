@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
 import structures.node.Nodes;
 
 public class ListLevels {
@@ -14,12 +13,12 @@ public class ListLevels {
         List<List<Nodes<Integer>>> resultado = new ArrayList<>();
 
         if (root == null) {
-            return resultado;
+            return resultado ;
         }
 
         Queue<Nodes<Integer>> cola = new LinkedList<>();
         cola.add(root);
-
+       
         while (!cola.isEmpty()) {
 
             int tamaño = cola.size();

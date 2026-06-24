@@ -5,10 +5,11 @@ import structures.node.Nodes;
 
 public class Depth {
     public int maxDepth(Nodes<Integer>  root) {
+        
     if (root == null) {
         return 0;
     }
-
+    
     int leftDepth = maxDepth(root.getLeft());
     int rightDepth = maxDepth(root.getRight());
 

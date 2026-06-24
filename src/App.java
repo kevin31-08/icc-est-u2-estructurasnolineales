@@ -1,14 +1,12 @@
 import java.util.List;
-
 import structures.models.Persona;
-
 import structures.node.Nodes;
 import structures.trees.BinaryTree;
-import structures.trees.InteTree;
 import structures.trees.Ejercicio_01_insert.InsertBSTTest;
 import structures.trees.Ejercicio_02_invert.InvertBinaryTree;
 import structures.trees.Ejercicio_03_listLeves.ListLevels;
 import structures.trees.Ejercicio_04_depth.Depth;
+import structures.trees.InteTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -26,12 +24,13 @@ public class App {
     int[] numero1 = new int[]{};
     int[] numero2 = new int[]{10};
     int[] numero3 = new int[]{10,8,6,4};
-     int[] numeros = new int[]{5,3,7,2,4,6,8};
+    int[] numeros = new int[]{5,3,7,2,4,6,8};
     ejercicio1.insert(numeros);
     ejercicio1.insert(numero1);
     ejercicio1.insert(numero2);
     ejercicio1.insert(numero3);
    
+    
     Nodes root = ejercicio2.insert(numeros);
     Nodes root1 = ejercicio2.insert(numero1);
     Nodes root2 = ejercicio2.insert(numero2);
@@ -56,6 +55,7 @@ public class App {
     System.out.println();
 
     Depth ejercicio4 = new Depth();
+    System.out.println("ejercicio04");
     int profundidad = ejercicio4.maxDepth(root);
     System.out.println("Profundidad: " + profundidad);
      int profundidad1 = ejercicio4.maxDepth(root1);
@@ -125,6 +125,7 @@ public class App {
     }
     public static void imprimirNiveles(List<List<Integer>> niveles) {
 
+    System.out.println("EJERCICIO03");
     for (List<Integer> nivel : niveles) {
 
         for (int i = 0; i < nivel.size(); i++) {
