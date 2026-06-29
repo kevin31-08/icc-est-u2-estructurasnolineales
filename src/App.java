@@ -1,4 +1,10 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
+import collections.set.Sets;
+import structures.models.Contacto;
 import structures.models.Persona;
 import structures.node.Nodes;
 import structures.trees.BinaryTree;
@@ -12,7 +18,53 @@ public class App {
     public static void main(String[] args) throws Exception {
        //runIntTree();
       //runBinaryTree();
-      runEjercicios();
+      //runEjercicios();
+      runSets();
+    }
+
+ private static void runSets() {
+       Sets sets = new Sets();
+
+       //Implementacion  -> hashSet hashcode
+       System.out.println("==== HASHCODE: ====");
+       Set<String> hashSet = sets.construirHashSet();
+       System.out.println(hashSet);
+       System.out.println("Size = "+ hashSet.size());
+       System.out.println(hashSet.contains("F"));
+       ArrayList<String> lis = new ArrayList<>();
+       lis.add("S");
+       System.out.println(lis);
+
+       //Implementacion  -> LikedHashSet hashcode
+       System.out.println("==== HLikedHashSet: ====");
+       Set<String> linkedHashSet = sets.construirLinkedHashSet();
+       System.out.println(linkedHashSet);
+       System.out.println("Size = "+ linkedHashSet.size());
+       System.out.println(linkedHashSet.contains("F"));
+
+       //Implementacion  -> TreeSet hashcode
+       System.out.println("==== TreeSet: ====");
+       Set<String> treeSet = sets.construirTreSet();
+       System.out.println(treeSet);
+       System.out.println("Size = "+ treeSet.size());
+       System.out.println(treeSet.contains("F"));
+
+       //Implementacion  -> hashSetContacto hashcode
+       System.out.println("==== HASHCODE: ====");
+       Set<Contacto> hashSetContacto = sets.construirHasSeContacto();
+       System.out.println(hashSetContacto);
+       System.out.println("Size = "+ hashSetContacto.size());
+       
+
+          //Implementacion  -> TreeSet hashcode
+       System.out.println("==== Tree Contacto Set: ====");
+       Set<Contacto> tCSet = sets.construirTreeSetContacto();
+       System.out.println(tCSet);
+       System.out.println("Size = "+ tCSet.size());
+       
+
+      
+      
     }
 
  private static void runEjercicios() {
