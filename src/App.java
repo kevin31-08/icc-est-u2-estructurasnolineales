@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import collections.set.Sets;
+import maps.Maps;
 import structures.models.Contacto;
 import structures.models.Persona;
 import structures.node.Nodes;
@@ -19,7 +20,12 @@ public class App {
        //runIntTree();
       //runBinaryTree();
       //runEjercicios();
-      runSets();
+      //runSets();
+       Maps maps = new Maps();
+       maps.construirHashMap();
+       maps.cLinkedHashMap();
+       maps.cTreeMap();
+
     }
 
  private static void runSets() {
